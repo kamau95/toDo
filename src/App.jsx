@@ -46,10 +46,19 @@ setTodos( updatedArr);
            >Completed</button>
   </div>
   <div className="to-list">
-    <div className="todo-list-item">
-      <h3>Title</h3>
-      <p>Description</p>
+  {allTodos.map(( item, index)=>{
+    return(
+      <div className="todo-list-item" key={index}>
+        <div>
+        <h3>{item.title}</h3>
+      <p>{item.description}</p>
     </div>
+    </div>
+    )
+  })}
+    
+      
+      
   </div>
 </div>
   )
